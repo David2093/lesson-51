@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модальне вікно з формою</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="btn-open" data-modal-open>Замовити послугу</button>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="btn-close" data-modal-close>&times;</button>
+            <h2>Форма заявки</h2>
+            <form>
+                <label>
+                    Ім’я:
+                    <input type="text" name="name" minlength="3" maxlength="12" required placeholder="Введіть ім’я">
+                </label>
+                <label>
+                    Email:
+                    <input type="email" name="email" required placeholder="example@gmail.com">
+                </label>
+                <label>
+                    Телефон:
+                    <input type="tel" name="phone" pattern="^\+380\d{9}$" required placeholder="+380XXXXXXXXX">
+                </label>
+                <label>
+                    Повідомлення:
+                    <textarea name="message" rows="4" placeholder="Ваше повідомлення"></textarea>
+                </label>
+                <button type="submit" class="btn-submit">Відправити</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="modal2.js"></script>
+</body>
+
+</html>
